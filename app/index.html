@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="mainApp" >
+<head>
+	<meta charset="utf-8">
+	<title>Oddschecker</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script>document.write("<base href=\"" + document.location + "\" />");</script>
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="../node_modules/angular-scroll/angular-scroll.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="mainController">
+	<div id="container" du-scroll-container class="title" ng-show="teams">
+		{{teams.name}}
+	</div>
+	<div class="selected_team container-fluid">
+		<div class="row">
+			<div class="team_image col-xs-12 col-md-4">
+				<img ng-src="{{team_image}}?w=350&h=350"/>
+			</div>
+			<div class="team_description col-xs-12 col-md-8">
+				<ul>
+					<li class="team_position">
+						<span>Position: </span><span>{{position}}</span>
+					</li>
+					<li class="team_last_fixture">
+						<span>Last 5 fixtures: </span><span>{{last_5_fixtures}}</span>
+					</li>
+					<li class="team_next_fixture">
+						<span>Next fixture: </span><span>{{next_fixture}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="teams_container container-fluid">
+		<div class="row">
+			<div class="team_container col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="team in teams.clubs" ng-click="setTeam(team)">
+				<div>
+					<img ng-src="{{team.crest}}?w=300&h=300"/>
+				</div>
+				<div class="team_name">{{team.name}}</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

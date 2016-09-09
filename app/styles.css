@@ -1,0 +1,48 @@
+.title {
+  font-size: 60px;
+  font-weight: 600;
+  float: left;
+  width: 100%;
+  padding: 30px 60px; }
+
+.teams_container {
+  padding: 70px;
+  float: left;
+  width: 100%;
+  cursor: pointer; }
+  .teams_container .team_container {
+    text-align: center;
+    margin-bottom: 30px; }
+    .teams_container .team_container > div {
+      border: 3px solid #D2D2D2;
+      font-size: 24px; }
+      .teams_container .team_container > div > img {
+        width: 100%; }
+  .teams_container .team_name {
+    text-align: center;
+    background-color: #D2D2D2; }
+
+.selected_team {
+  float: left;
+  width: 100%;
+  background-color: #000;
+  padding-left: 0;
+  padding-right: 0; }
+  .selected_team .team_image > img {
+    width: 100%;
+    padding: 50px 35px; }
+  .selected_team .team_description {
+    color: #fff;
+    padding: 75px 0; }
+    @media (min-width: 992px) {
+      .selected_team .team_description {
+        border-left: 1px solid #fff; } }
+    .selected_team .team_description ul {
+      margin-bottom: 14px; }
+      .selected_team .team_description ul li {
+        font-size: 30px;
+        padding-left: 20px;
+        line-height: 150px;
+        list-style: none; }
+    .selected_team .team_description .ng-binding {
+      font-weight: 600; }
